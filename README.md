@@ -33,10 +33,8 @@ All code and relevant files are included in their respective folders.
 Notes for Instructor
 
 Each exercise folder contains a complete solution with all necessary files.
-Links to specific exercises can be provided upon request (e.g., https://github.com/YourUsername/Exercises/tree/main/Exercise-01).
+Links to specific exercises can be provided upon request (e.g., https://github.com/Eclips77/Exercises/tree/main).
 Please let me know if you need additional information or clarification about any exercise.
 
-Contact
-For any questions or issues, feel free to contact me at [Your Email or Preferred Contact Method].
 
 Last updated: May 2025
