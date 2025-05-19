@@ -32,7 +32,17 @@ namespace SignalAnalyze
 
         public bool ContainsWord(string _word)
         {
-            return rawMessage.Contains(_word.ToLower());
+            string clenMsg = GetCleanMessage();
+            string lowerWord = _word.ToLower();
+            string[] words = clenMsg.Split(' ');
+            foreach (string word in words)
+            {
+                if (word == lowerWord)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public DateTime GetTimeStamp()
@@ -40,9 +50,10 @@ namespace SignalAnalyze
             return timeStamp;
         }
 
+        public override string ToString()
+        {
+            return $"raw message: {this.rawMessage}, timestamp: {this.timeStamp}";
+        }
 
-
-
-      
     }
 }

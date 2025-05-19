@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace SignalAnalyze
 {
-    public abstract class ThreatDictionary
+    internal class ThreatDictionary
     {
-        private List<string> Keywords;
+        private List<string> Keywords = new List<string>();
 
+        public ThreatDictionary()
+        {
+           this.Keywords = new List<string>();
+        }
 
 
         public void AddKeyword(string _keyword)
@@ -24,19 +28,21 @@ namespace SignalAnalyze
 
         public List<string> GetAllKeywords()
         {
-            return this.Keywords;
+
+
+            return new List<string>(this.Keywords);
         }
 
         public bool IsThreat(string _message)
         {
-            bool result = false;
-            foreach (string word in this.Keywords)
+            string[] words = _message.Split(' ');
+            foreach (string word in words)
             {
-                if (_message.Contains(word))
-                    result = true;
+                if (this.Keywords.Contains(word))
+                    return  true;
                 
             }
-            return result;
+            return false;
         
         }
     }
