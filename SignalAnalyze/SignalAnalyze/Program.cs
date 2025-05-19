@@ -10,7 +10,16 @@ namespace SignalAnalyze
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("hello world!");
+            string msg = "Hello world 123 ABC";
+            Signal signal = new Signal(msg);
+            string clean = signal.GetCleanMessage();
+            Console.WriteLine(clean);
+            Console.WriteLine(signal);
+           
+
+            
+             
+            
         }
     }
 }
