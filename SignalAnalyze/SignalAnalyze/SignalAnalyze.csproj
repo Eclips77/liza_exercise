@@ -46,6 +46,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Signal.cs" />
+    <Compile Include="SignalAnalyzer.cs" />
     <Compile Include="ThreatDictionary.cs" />
   </ItemGroup>
   <ItemGroup>

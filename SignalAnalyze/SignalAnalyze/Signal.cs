@@ -30,9 +30,9 @@ namespace SignalAnalyze
             return editedMsg;
         }
 
-        public bool ContainsWord(string word)
+        public bool ContainsWord(string _word)
         {
-            return rawMessage.ToLower().Contains(word.ToLower());
+            return rawMessage.Contains(_word.ToLower());
         }
 
         public DateTime GetTimeStamp()
