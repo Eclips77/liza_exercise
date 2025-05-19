@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace SignalAnalyze
@@ -27,6 +28,16 @@ namespace SignalAnalyze
                 }
             }
             return editedMsg;
+        }
+
+        public bool ContainsWord(string word)
+        {
+            return rawMessage.ToLower().Contains(word.ToLower());
+        }
+
+        public DateTime GetTimeStamp()
+        {
+            return timeStamp;
         }
 
 
