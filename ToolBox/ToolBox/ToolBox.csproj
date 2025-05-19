@@ -43,8 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllTools.cs" />
+    <Compile Include="Drill.cs" />
+    <Compile Include="Hammer.cs" />
+    <Compile Include="NailGun.cs" />
+    <Compile Include="PipeCutter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Saw.cs" />
+    <Compile Include="ScrewDriver.cs" />
+    <Compile Include="Tool.cs" />
+    <Compile Include="WireStripper.cs" />
+    <Compile Include="Wrench.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
