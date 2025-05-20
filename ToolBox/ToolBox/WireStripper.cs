@@ -11,7 +11,7 @@ namespace ToolBox
 
         public WireStripper(string name, int weight) : base(name, weight) 
         {
-            this.Category = " Precision";
+            this.Category = "Precision";
         }
 
         public override void Describe()

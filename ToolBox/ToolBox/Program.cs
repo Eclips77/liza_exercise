@@ -19,7 +19,6 @@ namespace ToolBox
             NailGun nailGun = new NailGun("nail gun 1", 50);
             WireStripper wirestripper = new WireStripper("Wire Stripper 1", 40);
             
-
             Tool[] tools = { hammer, drill, saw, wrench, pipecutter,nailGun,wirestripper };
 
             AllTools all = new AllTools();
@@ -28,13 +27,8 @@ namespace ToolBox
             {
                 all.AddTool(tool);
             }
-            all.PrintAllTools();
-            Console.WriteLine("//////////////////////////////////////////////");
             all.SortByCategory();
             all.PrintAllTools();
-       
-
-
         }
     }
 }
