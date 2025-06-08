@@ -15,10 +15,11 @@ namespace sqlConnect
         static void Main(string[] args)
         {
             AgentDal dal = new AgentDal();
+            UpdateAgentMenu();
             //start(5);
             //DeleteAgentsByRange(10,13);
-            dal.PrintAgentList(dal.GetAllAgents());
-            PrintStatusCounts();
+            //dal.PrintAgentList(dal.GetAllAgents());
+            //PrintStatusCounts();
         }
     }
 }

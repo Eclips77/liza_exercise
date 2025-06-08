@@ -39,7 +39,7 @@ namespace sqlConnect.DAL
             {
                 this._conn.Open();
                 Console.WriteLine("Connection successful.");
-                Console.Clear();
+                //Console.Clear();
             }
             return this._conn;
         }
@@ -125,16 +125,16 @@ namespace sqlConnect.DAL
                 CloseConnection();
             }
         }
-        public void UpdateAgentLocation(int id,string newLocation)
+        public void UpdateAgentField(int id,string field,object value)
         {
-            string query = "UPDATE agents SET location = @newLocation WHERE id = @id";
+            string query = $"UPDATE agents SET {field} = @newValue WHERE id = @id";
             try
             {
                 OpenConnection();
                 using (var cmd = new MySqlCommand(query, _conn))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
-                    cmd.Parameters.AddWithValue("@newLocation", newLocation);
+                    cmd.Parameters.AddWithValue("@newValue", value);
                     int effected = cmd.ExecuteNonQuery();
                     if (effected > 0)
                         Console.WriteLine("Agent Updating successfully.");
